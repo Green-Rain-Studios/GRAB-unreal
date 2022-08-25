@@ -49,4 +49,10 @@ class GRAB_API UGRABBPLibrary : public UBlueprintFunctionLibrary
 
 	UFUNCTION(BlueprintPure, Category="GRAB")
 	static FString GetCurrentTime();
+
+	UFUNCTION(BlueprintPure, Category="GRAB")
+	static FString GetAPIKey();
+
+	UFUNCTION(BlueprintPure, Category="GRAB")
+	static FString GetAPISecret();
 };

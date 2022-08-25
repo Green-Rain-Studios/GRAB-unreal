@@ -1,6 +1,7 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "GRABBPLibrary.h"
+#include "GRABSettings.h"
 #include "GRAB.h"
 
 #include "JsonUtilities.h"
@@ -34,4 +35,20 @@ FString UGRABBPLibrary::ToJSONString(TArray<FGRABAssetData> inAssetData)
 FString UGRABBPLibrary::GetCurrentTime()
 {
 	return FDateTime::UtcNow().ToString();
+}
+
+FString UGRABBPLibrary::GetAPIKey()
+{
+	// Return the correct variable from settings
+	const UGRABSettings* GRABSettings = GetDefault<UGRABSettings>();
+
+	return GRABSettings->ClientKey;
+}
+
+FString UGRABBPLibrary::GetAPISecret()
+{
+	// Return the correct variable from settings
+	const UGRABSettings* GRABSettings = GetDefault<UGRABSettings>();
+
+	return GRABSettings->ClientSecret;
 }
