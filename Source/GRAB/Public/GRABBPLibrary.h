@@ -44,6 +44,9 @@ class GRAB_API UGRABBPLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_UCLASS_BODY()
 
-	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Execute Sample function", Keywords = "GRAB sample test testing"), Category = "GRABTesting")
-	static float GRABSampleFunction(float Param);
+	UFUNCTION(BlueprintPure, Category="GRAB|Asset Data")
+	static FString ToJSONString(TArray<FGRABAssetData> inAssetData);
+
+	UFUNCTION(BlueprintPure, Category="GRAB")
+	static FString GetCurrentTime();
 };

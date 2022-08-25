@@ -42,7 +42,9 @@ public class GRAB : ModuleRules
 				"SlateCore",
 				"UnrealEd",
 				"PythonScriptPlugin",
-				"Blutility"
+				"Blutility",
+				"Json",
+				"JsonUtilities"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
