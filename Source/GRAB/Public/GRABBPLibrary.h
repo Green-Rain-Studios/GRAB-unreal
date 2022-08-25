@@ -33,6 +33,10 @@ struct GRAB_API FGRABAssetData
 	FString Uploader;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="GRAB|Asset Data")
 	FString Timestamp;
+	UPROPERTY(BlueprintReadWrite, Category="GRAB|Asset Data")
+	FString ThumbnailURL;
+	UPROPERTY(BlueprintReadWrite, Category="GRAB|Asset Data")
+	FString VideoURL;
 };
 
 UCLASS()
