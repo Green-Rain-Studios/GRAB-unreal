@@ -28,7 +28,7 @@ struct GRAB_API FGRABAssetData
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="GRAB|Asset Data")
 	FString Description;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="GRAB|Asset Data")
-	FString Metadata;
+	FString Tags;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="GRAB|Asset Data")
 	FString Uploader;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="GRAB|Asset Data")
