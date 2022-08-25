@@ -44,7 +44,8 @@ public class GRAB : ModuleRules
 				"PythonScriptPlugin",
 				"Blutility",
 				"Json",
-				"JsonUtilities"
+				"JsonUtilities",
+				"DeveloperSettings"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);

@@ -1,12 +1,17 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "GRAB.h"
+#include "GRABSettings.h"
 
 #define LOCTEXT_NAMESPACE "FGRABModule"
 
 void FGRABModule::StartupModule()
 {
 	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
+	// Load settings into the project settings menu
+	const UGRABSettings* GRABSettings = GetDefault<UGRABSettings>();
+
+	
 	
 }
 
