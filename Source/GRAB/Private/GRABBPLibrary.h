@@ -50,9 +50,17 @@ class GRAB_API UGRABBPLibrary : public UBlueprintFunctionLibrary
 	UFUNCTION(BlueprintPure, Category="GRAB")
 	static FString GetCurrentTime();
 
-	UFUNCTION(BlueprintPure, Category="GRAB")
+	// Settings
+	UFUNCTION(BlueprintPure, Category="GRAB|Settings")
 	static FString GetAPIKey();
-
-	UFUNCTION(BlueprintPure, Category="GRAB")
-	static FString GetAPISecret();
+	UFUNCTION(BlueprintPure, Category="GRAB|Settings")
+	static FString GetAPISecret();	
+	UFUNCTION(BlueprintPure, Category="GRAB|Settings")
+	static FString GetBucketName();	
+	UFUNCTION(BlueprintPure, Category="GRAB|Settings")
+	static FString GetBucketRegion();
+	UFUNCTION(BlueprintPure, Category="GRAB|Settings")
+	static FString GetStorageEndpoint();
+	UFUNCTION(BlueprintPure, Category="GRAB|Settings")
+	static FString GetBucketURL();
 };

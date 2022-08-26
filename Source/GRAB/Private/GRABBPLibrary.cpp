@@ -52,3 +52,35 @@ FString UGRABBPLibrary::GetAPISecret()
 
 	return GRABSettings->ClientSecret;
 }
+
+FString UGRABBPLibrary::GetBucketName()
+{
+	// Return the correct variable from settings
+	const UGRABSettings* GRABSettings = GetDefault<UGRABSettings>();
+
+	return GRABSettings->BucketName;
+}
+
+FString UGRABBPLibrary::GetBucketRegion()
+{
+	// Return the correct variable from settings
+	const UGRABSettings* GRABSettings = GetDefault<UGRABSettings>();
+
+	return GRABSettings->BucketRegion;
+}
+
+FString UGRABBPLibrary::GetStorageEndpoint()
+{
+	// Return the correct variable from settings
+	const UGRABSettings* GRABSettings = GetDefault<UGRABSettings>();
+
+	return GRABSettings->ObjectStorageEndpoint;
+}
+
+FString UGRABBPLibrary::GetBucketURL()
+{
+	// Return the correct variable from settings
+	const UGRABSettings* GRABSettings = GetDefault<UGRABSettings>();
+
+	return GRABSettings->BucketURL;
+}
