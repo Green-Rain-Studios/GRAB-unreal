@@ -39,6 +39,19 @@ struct GRAB_API FGRABAssetData
 	FString VideoURL;
 };
 
+USTRUCT(BlueprintType, Category = "GRAB", meta = (DisplayName = "GRAB Blueprint Asset Data"))
+struct GRAB_API FGRAB_BlueprintAssetData
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "GRAB Blueprint Asset Data")
+	FGRABAssetData GrabAssetData;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "GRAB Blueprint Asset Data")
+	TSubclassOf<AActor> BlueprintAssetClass;
+};
+
+
 UCLASS()
 class GRAB_API UGRABBPLibrary : public UBlueprintFunctionLibrary
 {
@@ -63,4 +76,8 @@ class GRAB_API UGRABBPLibrary : public UBlueprintFunctionLibrary
 	static FString GetStorageEndpoint();
 	UFUNCTION(BlueprintPure, Category="GRAB|Settings")
 	static FString GetBucketURL();
+
+	//Blueprint
+	UFUNCTION(BlueprintPure, Category = "GRAB|Blueprints")
+	static AActor* GetDefaultObject(TSubclassOf<AActor> ActorClass);
 };
