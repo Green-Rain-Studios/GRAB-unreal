@@ -70,14 +70,14 @@ public:
 	FFilePath FFMPEGLocation;
 
 	/*
-	 * Video coded to use
+	 * Video codec to use
 	 */
 	UPROPERTY(config, EditAnywhere, Category="GRAB", DisplayName="Video Codec", meta=(ConfigRestartRequired=true))
 	FString VideoCodec;
 
 	
 	/*
-	 * Audio coded to use
+	 * Audio codec to use
 	 */
 	UPROPERTY(config, EditAnywhere, Category="GRAB", DisplayName="Audio Codec", meta=(ConfigRestartRequired=true))
 	FString AudioCodec;

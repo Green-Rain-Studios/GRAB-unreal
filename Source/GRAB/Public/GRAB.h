@@ -18,5 +18,5 @@ public:
 
 	bool SetEncoderSettings(const FGRAB_EncoderSettings& EncoderSettingsToUse) const;
 
-	bool ActivateDefaultEUW(TSubclassOf<UEditorUtilityWidget> ClassToUse);
+	//bool ActivateDefaultEUW(TSubclassOf<UEditorUtilityWidget> ClassToUse);
 };

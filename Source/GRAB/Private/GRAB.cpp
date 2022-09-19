@@ -23,7 +23,8 @@ void FGRABModule::StartupModule()
 		                   GRABSettings->OutputFileExtension
 						});
 
-	ActivateDefaultEUW(GRABSettings->DefaultGRABToolUI);
+	//TODO: Uncomment to set active Default EUW tool to use
+	//ActivateDefaultEUW(GRABSettings->DefaultGRABToolUI);
 }
 
 void FGRABModule::ShutdownModule()
@@ -53,7 +54,7 @@ bool FGRABModule::SetEncoderSettings(const FGRAB_EncoderSettings& EncoderSetting
 	return false;
 }
 
-bool FGRABModule::ActivateDefaultEUW(TSubclassOf<UEditorUtilityWidget> ClassToUse)
+/*bool FGRABModule::ActivateDefaultEUW(TSubclassOf<UEditorUtilityWidget> ClassToUse)
 {
 	//TODO: Fix this to actually spawn the Editor
 	if(ClassToUse)
@@ -75,7 +76,7 @@ bool FGRABModule::ActivateDefaultEUW(TSubclassOf<UEditorUtilityWidget> ClassToUs
 	}
 
 	return false;
-}
+}*/
 
 
 #undef LOCTEXT_NAMESPACE
