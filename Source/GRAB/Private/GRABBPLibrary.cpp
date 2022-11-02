@@ -15,14 +15,10 @@ UGRABBPLibrary::UGRABBPLibrary(const FObjectInitializer& ObjectInitializer)
 FString UGRABBPLibrary::ToJSONString(TArray<FGRABAssetData> inAssetData)
 {
 	// Convert entire struct to a json object and return string
-	TSharedPtr<FJsonObject> jsonObject =  MakeShareable(new FJsonObject);
+	FGRABAssetArray array = {inAssetData};
 
 	// Add all objects to one single json data
-	for(FGRABAssetData assetData : inAssetData)
-	{
-		TSharedPtr<FJsonObject> jo = FJsonObjectConverter::UStructToJsonObject<FGRABAssetData>(assetData);
-		jsonObject->SetObjectField(assetData.Name, jo);
-	}
+	TSharedPtr<FJsonObject> jsonObject = FJsonObjectConverter::UStructToJsonObject<FGRABAssetArray>(array);
 	
 	// Serialize string
 	FString outputString;
@@ -35,6 +31,11 @@ FString UGRABBPLibrary::ToJSONString(TArray<FGRABAssetData> inAssetData)
 FString UGRABBPLibrary::GetCurrentTime()
 {
 	return FDateTime::UtcNow().ToString();
+}
+
+int64 UGRABBPLibrary::GetCurrentUnixEpochTime()
+{
+	return FDateTime::UtcNow().ToUnixTimestamp();
 }
 
 FString UGRABBPLibrary::GetAPIKey()

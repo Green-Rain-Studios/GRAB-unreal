@@ -22,21 +22,28 @@ struct GRAB_API FGRABAssetData
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="GRAB|Asset Data")
 	FDirectoryPath Path;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="GRAB|Asset Data")
-	TArray<FString> References;
+	TArray<FFilePath> References;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="GRAB|Asset Data")
 	TArray<FDirectoryPath> ReferenceDirs;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="GRAB|Asset Data")
 	FString Description;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="GRAB|Asset Data")
-	FString Tags;
+	TArray<FString> Tags;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="GRAB|Asset Data")
 	FString Uploader;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="GRAB|Asset Data")
-	FString Timestamp;
 	UPROPERTY(BlueprintReadWrite, Category="GRAB|Asset Data")
 	FString ThumbnailURL;
 	UPROPERTY(BlueprintReadWrite, Category="GRAB|Asset Data")
 	FString VideoURL;
+};
+
+USTRUCT()
+struct GRAB_API FGRABAssetArray
+{
+	GENERATED_BODY()
+
+	UPROPERTY()
+	TArray<FGRABAssetData> Assets;
 };
 
 UCLASS()
@@ -49,6 +56,9 @@ class GRAB_API UGRABBPLibrary : public UBlueprintFunctionLibrary
 
 	UFUNCTION(BlueprintPure, Category="GRAB")
 	static FString GetCurrentTime();
+
+	UFUNCTION(BlueprintPure, Category="GRAB")
+	static int64 GetCurrentUnixEpochTime();
 
 	// Settings
 	UFUNCTION(BlueprintPure, Category="GRAB|Settings")
