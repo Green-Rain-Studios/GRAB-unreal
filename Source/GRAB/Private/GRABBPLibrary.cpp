@@ -84,3 +84,13 @@ FString UGRABBPLibrary::GetBucketURL()
 
 	return GRABSettings->BucketURL;
 }
+
+AActor* UGRABBPLibrary::GetDefaultObject(TSubclassOf<AActor> ActorClass)
+{
+	if (ActorClass)
+	{
+		return ActorClass.GetDefaultObject();
+	}
+
+	return nullptr;
+}

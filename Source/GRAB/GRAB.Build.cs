@@ -45,7 +45,12 @@ public class GRAB : ModuleRules
 				"Blutility",
 				"Json",
 				"JsonUtilities",
-				"DeveloperSettings"
+				"DeveloperSettings", 
+				"MovieRenderPipelineCore", 
+				"UMGEditor", 
+				"UnrealEd",
+				"Blutility",
+				"UMG",
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);

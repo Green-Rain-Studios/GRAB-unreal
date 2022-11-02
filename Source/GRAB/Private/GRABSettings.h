@@ -69,9 +69,28 @@ public:
 	UPROPERTY(config, EditAnywhere, Category="GRAB", DisplayName="FFMPEG Location", meta=(ConfigRestartRequired=true))
 	FFilePath FFMPEGLocation;
 
+	/*
+	 * Video codec to use
+	 */
+	UPROPERTY(config, EditAnywhere, Category="GRAB", DisplayName="Video Codec", meta=(ConfigRestartRequired=true))
+	FString VideoCodec;
+
+	
+	/*
+	 * Audio codec to use
+	 */
+	UPROPERTY(config, EditAnywhere, Category="GRAB", DisplayName="Audio Codec", meta=(ConfigRestartRequired=true))
+	FString AudioCodec;
+
+	/*
+	 * File extension to use
+	 */
+	UPROPERTY(config, EditAnywhere, Category="GRAB", DisplayName="Output File Type", meta=(ConfigRestartRequired=true))
+	FString OutputFileExtension;
+
 	/**
 	 * The tool widget class to be launched when the project is opened
 	 */
 	UPROPERTY(config, EditAnywhere, Category="GRAB", meta=(ConfigRestartRequired=true))
-	TSubclassOf<UEditorUtilityWidget> DefaultGRABToolUI;
+	TSubclassOf<class UEditorUtilityWidget> DefaultGRABToolUI;
 };

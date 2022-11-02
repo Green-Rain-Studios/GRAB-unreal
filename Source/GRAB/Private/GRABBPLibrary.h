@@ -63,4 +63,8 @@ class GRAB_API UGRABBPLibrary : public UBlueprintFunctionLibrary
 	static FString GetStorageEndpoint();
 	UFUNCTION(BlueprintPure, Category="GRAB|Settings")
 	static FString GetBucketURL();
+
+	//Blueprint
+	UFUNCTION(BlueprintPure, Category = "GRAB|Blueprints")
+	static AActor* GetDefaultObject(TSubclassOf<AActor> ActorClass);
 };
