@@ -43,3 +43,16 @@ def upload_asset_previews(name:str, path:str):
     video_url = unreal.GRABBPLibrary.get_bucket_url()+'/'+video_key
 
     return thumbnail_url, video_url
+
+def UploadJsonStringToEndpoint(json_str:str):
+    import requests
+
+    url = unreal.GRABBPLibrary.get_frontend_endpoint()
+
+    if url != '':
+        req = requests.post(url, data=json_str)
+    else:
+        req = "No endpoint detected in G.R.A.B. settings, skipped"
+        return req
+
+    return req.text
