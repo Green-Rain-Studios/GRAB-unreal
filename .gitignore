@@ -19,6 +19,9 @@
 *.dylib
 *.dll
 
+# Compiled python files
+*.pyc
+
 # Fortran module files
 *.mod
 
