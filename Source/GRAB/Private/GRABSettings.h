@@ -66,7 +66,7 @@ public:
 	/**
      * Endpoint to POST the json output after rendering to. Leave empty if none exists
      */
-    UPROPERTY(config, EditAnywhere, Category="Web Frontend")
+    UPROPERTY(config, EditAnywhere, DisplayName="Endpoint(optional)", Category="Web Frontend")
     FString Endpoint;
 
 	/**
