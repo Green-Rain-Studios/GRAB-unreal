@@ -28,8 +28,7 @@ def upload_asset_previews(name:str, path:str):
         client.put_object(
                             Bucket=unreal.GRABBPLibrary.get_bucket_name(),
                             Key=thumbnail_key,
-                            Body=img,
-                            ACL='public-read'
+                            Body=img
                         )
 
     # Upload video
@@ -37,8 +36,7 @@ def upload_asset_previews(name:str, path:str):
         client.put_object(
                             Bucket=unreal.GRABBPLibrary.get_bucket_name(),
                             Key=video_key,
-                            Body=vid,
-                            ACL='public-read'
+                            Body=vid
                         )
 
     thumbnail_url = unreal.GRABBPLibrary.get_bucket_url()+'/'+thumbnail_key
