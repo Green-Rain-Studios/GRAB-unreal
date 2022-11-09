@@ -31,7 +31,7 @@ def pip_install(packages):
     return proc.poll()
 
 # Put your required python packages here
-required = {'boto3'}
+required = {'requests','boto3'}
 installed = {pkg.key for pkg in pkg_resources.working_set}
 missing = required - installed
 
