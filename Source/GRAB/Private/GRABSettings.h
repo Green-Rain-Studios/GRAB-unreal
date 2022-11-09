@@ -62,6 +62,12 @@ public:
 	 */
 	UPROPERTY(config, EditAnywhere, Category="Object Storage (S3 Compatible)")
 	FString ClientSecret;
+	
+	/**
+     * Endpoint to POST the json output after rendering to. Leave empty if none exists
+     */
+    UPROPERTY(config, EditAnywhere, Category="Web Frontend")
+    FString Endpoint;
 
 	/**
 	 * Location to the FFMPEG binary. Leave as-is to use the bundled one, or browse to your own executable

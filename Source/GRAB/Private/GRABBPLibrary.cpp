@@ -86,6 +86,14 @@ FString UGRABBPLibrary::GetBucketURL()
 	return GRABSettings->BucketURL;
 }
 
+FString UGRABBPLibrary::GetFrontendEndpoint()
+{
+	// Return the correct variable from settings
+	const UGRABSettings* GRABSettings = GetDefault<UGRABSettings>();
+
+	return GRABSettings->Endpoint;
+}
+
 AActor* UGRABBPLibrary::GetDefaultObject(TSubclassOf<AActor> ActorClass)
 {
 	if (ActorClass)
